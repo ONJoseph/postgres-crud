@@ -1,0 +1,19 @@
+- curl -X POST -H "Content-Type: application/json" -d '{"name": "Joseph Ogbole", "email": "on.josephinfo@gmail.com"}' http://localhost:3000/create
+- curl -X POST -H "Content-Type: application/json" -d '{"name": "Isaac Ogbole", "email": "isaacogbole@gmail.com"}' http://localhost:3000/create
+- curl http://localhost:3000/read
+- curl -X PUT -H "Content-Type: application/json" -d '{"name": "Joe John", "email": "joejohn@gmail.com"}' http://localhost:3000/update/1
+- curl -X DELETE http://localhost:3000/delete/2
+- To delete the 'users' table, use the following SQL command:
+DROP TABLE IF EXISTS users;
+- Create a table named 'users' with columns for 'id' (auto-incremented), 'name,' and 'email' by executing the following SQL command:
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+- psql -U postgres
+- CREATE DATABASE postgres_cruddb;
+- \c postgres_cruddb;
+- change the password for a user using the following SQL command. Replace username with the actual username for which you want to change the password:
+ALTER USER myuser WITH PASSWORD 'newpass';
+- 
